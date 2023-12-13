@@ -1,0 +1,39 @@
+/* Fonts */
+body{
+    font-size:medium;
+    font-family: 'Aleo', serif;
+}
+
+main{
+    font-size: .9rem;
+}
+
+h1,h2{
+    font-size: 1.2rem;
+}
+
+/* Colors */
+:root{
+    --LightColor: rgb(91, 86, 86);
+    --LightAccentColor: rgb(244, 244, 244);
+    --DarkColor:  rgb(77, 20, 20);
+    --DarkAccentColor: rgb(46, 12, 12);
+    --HighlightColor: rgb(46, 12, 12);
+}
+body{
+    color: var(--LightColor);
+    background-color: var(--DarkColor);
+}
+article{
+    color: var(--LightColor);
+    background-color: var(--DarkColor);
+}
+main{
+    color: var(--LightColor);
+    background-color: var(--DarkColor);
+}
+header{
+    color: var(--LightAccentColor) ;
+    background-color: var(--DarkAccentColor);
+}
+/* Layout */
