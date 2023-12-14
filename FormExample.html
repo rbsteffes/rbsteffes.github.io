@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="So this is my page about forms.">
+        <title>Form Class</title>
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+
+    </head>
+    <body>
+        <form action="#submit" method="get">
+            <fieldset>
+                <legend>Label for fieldset.</legend>
+                <label> First name:<BR> <input type="text" name="firstname1" id="firstname1" placeholder="Default" value="First Name"></label>
+                <label for="firstname2">First Name:</label><input type="text" name="firstname2" id="firstname2"><br>
+                <textarea name="TextArea" id="TextArea" placeholder="What do you want to say?">Value</textarea><br>
+                <label for="SelectBox">Please choose your education:</label>
+                <select name="selectBox" id="selectBox" multiple>
+                    <optgroup label="Schooling">
+                        <option value="none">No Education</option>
+                        <option value="some">High School</option>
+                        <option value="lots">College or Higher Education</option>
+                    </optgroup>
+                    <optgroup label="Professional">
+                        <option value="self">Self Taught</option>
+                        <option value="appre">Apprentice</option>
+                    </optgroup>
+                </select><br>
+                <label for="Color">Favorite Color:</label><input type="color" name="Color" id="Color">
+                <input type="date">
+
+                <h2>Gender:</h2>
+                  
+                    <ul>
+                        <li>
+                            <input type="radio" name="Gender" id="Gender" value="male" />
+                            <label for="Gender">Male</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="Gender" id="Gender" value="fe" />
+                            <label for="Gender">Female</label>
+                        </li>
+                  </ul>
+
+                <input type="submit">
+                
+            </fieldset>
+        </form>
+    </body>
+</html>
