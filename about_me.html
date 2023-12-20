@@ -2,9 +2,25 @@
 <html lang="en">
     <head>
         <title></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Open+Sans:ital,wght@1,600&family=Rubik+Doodle+Shadow&family=Tangerine:wght@700&display=swap" rel="stylesheet">
         <script></script>
+        
         <noscript>Hey you don't support javascript</noscript>
         <style>
+            :root{
+                --Light-Color: #BCECEC;
+                --Dark-Color:#385462;
+                --Main-Color: #E8E4A6;
+                --Bright-Accent:#C0805D;
+                --Bold-Accent:#bf2a26;
+            }
+            *, *::before, *::after{
+                box-sizing: border-box;
+                padding:0px;
+                margin: 0px;
+            }
             #background_video{
                 position: fixed;
                 left:0px;
@@ -14,23 +30,87 @@
                 z-index: -100;
             }
             header{
-                margin: 20%;
-                background-color: bisque;
+                padding:1em 2em;
+                background-color: var(--Light-Color);
+
+            }
+            header>h1{
+                font-family: 'Rubik Doodle Shadow';
+                text-align: center;
+                font-size: 5rem;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            li{
+                padding: .5em 2em;
+                flex-basis: 75%;
             }
             main{
-                margin: 0;
-                background-color: white;
-                height: 120vh;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+            }
+            .stripes{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: var(--Main-Color);
+                color:var(--Dark-Color);
+                padding:2em;
+            }
+            .stripes img, .stripes video{
+                max-width: 95vw;
+                max-height: 50vh;
+               
+            }
+            .stripes:nth-child(even){
+                background-color:var(--Light-Color);
+                color:var(--Bright-Accent);
+            }
+            
+            section>h1, p{
+                text-align: justify;
+                padding: 1em 3em;
+            }
+            p+p{
+                margin: 2em 0em;
+            }
+
+            footer{
+                padding:0% 10%;
+                width:100%;
+                background-color: var(--Bright-Accent);
+                color: var(--Dark-Color);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            footer>aside{
+                flex-basis: 100%;
+            }
+            a{
+                text-decoration: none;
+                color:inherit;
+            }
+
+            @media screen and (min-width:720px) {
+                .stripes, footer, nav ul{
+                    flex-direction: row;
+                }
+                
+                
             }
 
         </style>
     </head>
     <body>
-        <video autoplay loop muted id="background_video">
-            <source src="https://rbsteffes.github.io/media/vinyl-57307(1).mp4" type="video/mp4">
-            Error text
-        </video>
-
+       
         <header>
             <div class="musicbox">
                 <audio controls autoplay>
@@ -40,19 +120,66 @@
                 </audio>
             </div>
 
+            <h1>About the Professor</h1>
+
             <nav>
+                <ul class="navBar">
+                    <li><a href="./boxmodel.html">Box Model Example</a></li>
+                    <li><a href="./FormExample.html">Form Example</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>   
             </nav>
 
         </header>
         <main>
-            <figure>
-                <picture>
-                    <source srcset="images/FromMyPicture.png" media="screen and (min-width:1024px)">
-                    <source srcset="images/prof1.png" media="screen and (min-width: 720px)">
-                    <img src="images/20220207_115900.jpg">    
-                </picture>
-                <figcaption>Really honest look at super good looking professor.</figcaption>
-            </figure>
+            <article class="stripes">
+                <figure>
+                    <picture>
+                        <source srcset="images/FromMyPicture.png" media="screen and (min-width:1024px)">
+                        <source srcset="images/prof1.png" media="screen and (min-width: 720px)">
+                        <img src="images/20220207_115900.jpg">    
+                    </picture>
+                    <figcaption>Really honest look at super good looking professor.</figcaption>
+                </figure>
+                <section>
+                    <h1>About The Professor</h1>
+                    <p>Hello there! I'm Ryan Steffes, a former programmer from the defense industry who decided to switch gears and venture into the vibrant world of education. Think of me as a real-life version of Indiana Jones – except instead of ancient relics, my quest is to unearth the treasures of knowledge and technology. After years of coding and decoding in the defense sector, a light bulb went off (probably an LED, considering my energy-efficient preferences), and I realized my true calling was in teaching. With a Master’s in Education already under my belt, I'm currently sharpening my skills further with master's level courses in computer science, focusing on data and AI – it's a bit like being in a 'Big Bang Theory' episode, but with less whiteboard equations and more practical applications.
+                        My adventure in education began at Wake Tech, where I've had the privilege of serving as both an adjunct and a full-time instructor. Here, I've learned that teaching is an art form, a delicate dance between sharing knowledge and igniting curiosity. My classrooms are dynamic labs where ideas are both challenged and cherished, much like the brainstorming sessions in 'Silicon Valley'. I firmly believe that every student is a unique algorithm, capable of solving complex problems in their own ingenious ways. My role? To be the debugger, the guide, the occasional 'Google' when the need arises.
+                        In my classes, we don't just learn about code; we explore the impact of technology on our lives, like how AI is slowly turning sci-fi fantasies into reality. Remember 'The Matrix'? Well, we're not that far off! As I delve deeper into the intricate world of computer science, I often find parallels with the challenges faced by educators. Both fields require creativity, patience, and a never-ending thirst for learning. My goal is to blend these worlds, creating a learning experience that's as engaging as a plot twist in 'Sherlock'.
+                        Outside the classroom, I'm a continuous learner, often found with my nose in the latest tech journals or experimenting with new programming languages – a bit less dramatic than 'Mr. Robot', but equally thrilling. I encourage my students to adopt a similar mindset, reminding them that like in 'Doctor Who', education is a time machine that can take you to incredible places.
+                        So, whether you're a budding programmer, a data enthusiast, or just curious about how technology is shaping our future, you've come to the right place. Let's embark on this journey together, unraveling the mysteries of computer science, one byte at a time. And who knows? Along the way, we might just create something that would make even the crew of 'Star Trek' proud. Beam us up, Scotty – we're ready for this educational adventure!</p>
+
+                </section>
+            </article>
+            <article class="stripes">
+                <video autoplay loop muted >
+                    <source src="https://rbsteffes.github.io/media/vinyl-57307(1).mp4" type="video/mp4">
+                    Error text
+                </video>
+                <section>
+                    <h1>Vinyl</h1>
+                    <p>In this enchanting video, the simplicity of the scene is its most captivating feature. The frame is filled with nothing but a classic vinyl record player, set against a backdrop of sheer nothingness. This stark contrast creates a surreal, almost otherworldly atmosphere. The record player, a beautifully crafted piece with a glossy wooden finish and gleaming metallic components, stands as a lone sentinel in a void of emptiness. It's an embodiment of both isolation and focus, drawing the viewer's entire attention to its singular, mesmerizing action.</p>
+                    <p>The record itself, a circular silhouette against the void, spins endlessly. The video's humor emerges not through overt jokes but through the absurdity of the situation. The needle drops onto the record with a satisfying click, and the viewer expects music, yet there's only the soft, rhythmic hum of the spinning record. It's an anticlimactic moment that tickles the funny bone - a record player playing to an empty universe, the quintessence of a performance without an audience.</p>
+                    <p>As the video loops, the record player becomes an endless, hypnotic cycle. The needle reaches the end of the record only to find itself magically back at the beginning, never stopping, never changing its course. This Sisyphean task of the needle, doomed to forever play a record that no one hears, adds a layer of subtle, existential humor. It's a playful nod to the futility and repetition of daily life, encapsulated in the eternal spin of a vinyl record in the vastness of nothingness. This video, with its minimalistic approach and dry wit, becomes a whimsical meditation on solitude, music, and the endless cycle of existence.</p>
+                </section>
+                    
+            </article>
         </main>
+        <footer>
+            <aside>
+                <ul>
+                    <li><a href="https://www.facebook.com/username" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com/username" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/username" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/username" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.youtube.com/user/username" target="_blank">YouTube</a></li>
+                    <li><a href="https://www.pinterest.com/username" target="_blank">Pinterest</a></li>
+                    <li><a href="https://www.snapchat.com/add/username" target="_blank">Snapchat</a></li>
+                    <li><a href="https://www.tiktok.com/@username" target="_blank">TikTok</a></li>
+                </ul>
+            </aside>
+            <aside><p>Deep and meaningful content goes here</p><p>Maybe about copyright?</p></aside>
+            <aside>Contact Us</aside>
+        </footer>
     </body>
 </html>
