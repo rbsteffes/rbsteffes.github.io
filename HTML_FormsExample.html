@@ -1,0 +1,47 @@
+<!doctype HTML>
+<!--
+A website that can be used as a survey containing questions about favorite color, email address, name, and other questions you can think of
+Invalid: red or noticeable in some way
+asterisk next to required fields, and asterisk should be red
+labels should be next to inputs on desktops
+labels should be above inputs on phones
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="This is an example page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Form Example</title>
+
+        <!-- Fonts, styles, scripts, other meta data-->
+        <link href="css/formstyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <form action="#" method="get" class="form">
+            <!--
+                GET HTML_FormsExample.html#?name=value&name=value&name=value
+                    -- Get is plain text (everyone can see the answers/insecure)
+                    -- Get has a size limit 
+                    -- Get can be cached
+                POST #
+                    -- data packet that gets sent with results
+                    -- no size limit
+                    -- can't be cached
+            
+                -->
+
+            <label for="name" class="form form__label">Your name <span class="form form--required">*</span></label>
+            <input type="text" id="name" required name="name" class="form form__input"><BR>
+    
+
+            <label for="email" class="form form__label">Your Email:<span class="form form--required">*</span></label>
+            <input type="email" id="email" required name="email" class="form form__input"><BR>
+
+            
+            <label for="fav_color" class="form form__label">Favorite Color:</label>
+            <input type="color" id="fav_color" name="fav_color" class="form form__input"><BR>
+
+            <button type="submit" class="form form__button">Send results</button>
+        </form>
+    </body>
+</html>

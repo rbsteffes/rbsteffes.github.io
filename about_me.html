@@ -8,7 +8,8 @@
         <script></script>
         
         <noscript>Hey you don't support javascript</noscript>
-        <style>
+        <link rel="stylesheet" href="css/style.css">
+        <style> /* Internal CSS */
             :root{
                 --Light-Color: #BCECEC;
                 --Dark-Color:#385462;
@@ -97,6 +98,25 @@
             a{
                 text-decoration: none;
                 color:inherit;
+                background-color: inherit;
+                border: none;
+                transition-property: font-size, background-color;
+                transition-duration: 500ms;
+                animation: noticeBox 500ms;
+                animation-fill-mode: both;
+                animation-iteration-count:infinite;
+                animation-timing-function: ease;
+            }
+
+            a:hover{
+                background-color: var(--Main-Color);
+                color: var(--Bold-Accent);
+                border: var(--Bright-Accent) solid 2px;
+                padding:0.5em;
+                font-size: larger;
+                transition-property: font-size, background-color;
+                transition-duration: 500ms;
+                
             }
 
             @media screen and (min-width:720px) {
@@ -105,6 +125,30 @@
                 }
                 
                 
+            }
+
+            .reviewQuestion{
+                filter:blur(10px);
+                transition: filter 500ms ease-in;
+            }
+            .reviewQuestion:hover{
+                filter:blur(0px);
+                transition: filter 500ms ease-in;
+            }
+
+            .noticeMe:focus{
+                animation: noticeBox 1500ms;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+            }
+
+            @keyframes noticeBox{
+                0%{ border: var(--Bold-Accent) 1.2em solid }
+                10%{ border: var(--Bold-Accent) .7em solid }
+                90%{ border: var(--Bold-Accent) .7em solid }
+                100%{ border: var(--Bold-Accent) .5em none }
+
             }
 
         </style>
@@ -156,7 +200,8 @@
                     <source src="https://rbsteffes.github.io/media/vinyl-57307(1).mp4" type="video/mp4">
                     Error text
                 </video>
-                <section>
+                <h1>What is this video showing?</h1>
+                <section class="reviewQuestion">
                     <h1>Vinyl</h1>
                     <p>In this enchanting video, the simplicity of the scene is its most captivating feature. The frame is filled with nothing but a classic vinyl record player, set against a backdrop of sheer nothingness. This stark contrast creates a surreal, almost otherworldly atmosphere. The record player, a beautifully crafted piece with a glossy wooden finish and gleaming metallic components, stands as a lone sentinel in a void of emptiness. It's an embodiment of both isolation and focus, drawing the viewer's entire attention to its singular, mesmerizing action.</p>
                     <p>The record itself, a circular silhouette against the void, spins endlessly. The video's humor emerges not through overt jokes but through the absurdity of the situation. The needle drops onto the record with a satisfying click, and the viewer expects music, yet there's only the soft, rhythmic hum of the spinning record. It's an anticlimactic moment that tickles the funny bone - a record player playing to an empty universe, the quintessence of a performance without an audience.</p>
@@ -168,7 +213,7 @@
         <footer>
             <aside>
                 <ul>
-                    <li><a href="https://www.facebook.com/username" target="_blank">Facebook</a></li>
+                    <li style="border:1px solid black"><a href="https://www.facebook.com/username" target="_blank">Facebook</a></li>
                     <li><a href="https://www.twitter.com/username" target="_blank">Twitter</a></li>
                     <li><a href="https://www.instagram.com/username" target="_blank">Instagram</a></li>
                     <li><a href="https://www.linkedin.com/in/username" target="_blank">LinkedIn</a></li>
@@ -179,7 +224,13 @@
                 </ul>
             </aside>
             <aside><p>Deep and meaningful content goes here</p><p>Maybe about copyright?</p></aside>
-            <aside>Contact Us</aside>
+            <aside><h1>Contact Us</h1>
+                <form action="#" method="get">
+                <textarea row="10" cols="10"></textarea><br>
+                <input type="email" id="senderEmail" name="sendEmail" class="noticeMe"><br>
+                <input type="submit">
+                </form>
+            </aside>
         </footer>
     </body>
 </html>

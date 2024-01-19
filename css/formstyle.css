@@ -1,0 +1,25 @@
+.form{
+    font-family: inherit;
+    color: black;
+    background-color: bisque;
+}
+
+.form__input:invalid{
+    background-color: red;
+}
+
+.form--required{
+    color: red;
+}
+
+.form__label{
+    display: block; /* Are boxes, start on new line, end on new line*/
+}
+
+@media screen and (min-width:720px) {
+    .form__label{
+        display: inline-block;
+        width:20%;
+    }
+    
+}
