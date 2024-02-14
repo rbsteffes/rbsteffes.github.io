@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--DarkColor);
+    color: var(--LightColor);
+    height: 10vh;
+}
+main{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    margin:0 2vw;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    text-align: center;
+}
+
+.card{
+    position:relative;
+    width: 15em;
+    height:100%;
+    background-color: var(--LightColor) ;
+    color: var(--DarkColor);
+    border: 1px solid black;
+    
+    box-shadow: black .3em .5em 1em;
+    margin: 2em;
+
+}
+.card-head{
+    min-height: 6em;
+    
+   
+
+
+}
+.card-head figure{
+    width: 100%;
+   
+}
+.card-head img{
+    display: block;
+    max-width: 75%;
+    max-height: 10em;
+    margin: auto auto;
+    position: absolute;
+    top: -2em;
+    left:2.5em;
+    border:1px solid black;
+    
+}
+.card-body{
+    padding:3em;
+}
