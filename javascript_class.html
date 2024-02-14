@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       
+</head>
+<body>
+    <script>
+    
+    // Global -- var
+    // Local -- Function
+    // Block -- let(s)
+    // NaN
+
+    let myVariable; // undefined
+    myVariable = 1; // not undefined
+
+    function showValue(){
+        alert(document.getElementById("InputID").value);
+    }
+
+    function addNumber(operandOne, operandTwo){
+        if(operandOne !== undefined && operandTwo !== undefined)
+        {
+            return operandOne + operandTwo;
+        }
+        else
+        {
+            alert("big error, operandOne is undefined");
+            return undefined;
+        }
+
+    }
+
+    let result = addNumber(1, 2);
+    result = addNumber();
+
+     </script>
+
+     <form>
+        <input type="text" id="InputID" value="Hi!">
+        <button onclick="showValue()">What's in the box?</button>
+     </form>
+
+</body>
+
+</html>
