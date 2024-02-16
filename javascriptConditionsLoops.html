@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let bTrue = true;
+        // This is okay
+        if( bTrue )
+        {
+            alert("True");
+        }
+        // This is also okay
+        if( bTrue)
+            alert("True");
+
+        // This is ALSO okay
+        if( bTrue )
+            alert("True")
+
+        if( bTrue ) alert("True")
+
+
+        if(bTrue)
+            alert("True")
+        else  
+            if(somethingelse) 
+                alert("False");
+        
+
+        var age=3;
+
+        let myPrice;
+        if( age <= 4) 
+            myPrice = 0;
+        else 
+            myPrice = 10;
+
+        myPrice = (age<=4)? 0: 10;
+
+
+        var discount = 0;
+        var dayOfTheWeek = "Wed";
+
+        switch(dayOfTheWeek){
+            case "Wed":
+                discount = 100;
+                break;
+            case "Mon":
+            case "Fri":
+                discount = 10;
+                break;
+            default:
+                discount = 0;
+        }
+
+
+       
+
+
+    </script>
+</body>
+</html>
