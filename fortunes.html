@@ -5,6 +5,9 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <div id="fortune_box" class="fortuneBox"></div>
+    <button onclick="displayFortune()">Fortune me!</button>
     <script>
         const fortunes= [
                     "You will soon achieve perfection... in your ability to make mistakes.",
@@ -21,14 +24,12 @@
         
         function displayFortune(){
             let randIndex = Math.floor(Math.random()* fortunes.length);
-            alert(fortunes[randIndex]);
+            document.getElementById("fortune_box").innerHTML = fortunes[randIndex];
         }
         
 
-
+        displayFortune();
 
     </script>
-    <button onclick="displayFortune()">Fortune me!</button>
-
 </body>
 </html>
