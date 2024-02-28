@@ -19,14 +19,16 @@
                     "You will receive a fortune cookie."
                 ]
         
-        let randIndex = Math.floor(Math.random()* fortunes.length);
-
-        alert(fortunes[randIndex]);
-
+        function displayFortune(){
+            let randIndex = Math.floor(Math.random()* fortunes.length);
+            alert(fortunes[randIndex]);
+        }
+        
 
 
 
     </script>
+    <button onclick="displayFortune()">Fortune me!</button>
 
 </body>
 </html>
