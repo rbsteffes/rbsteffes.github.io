@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let myGrades = [
+                        [100, 97, 0, 29, 100, 100, 100],
+                        [100, 97, 100, 29, 100, 100, 100],
+                        [100, 97, 50, 23, 0, 100, 100],
+                        [100, 97, 100, 93, 100, 90, 100]
+                        ];
+                    
+       let myTotal = 0, mySubtotal = 0, myGradeCount=0;
+
+       for( var student=0; student < myGrades.length; student++)
+       {
+            mySubtotal = 0;
+            myGradeCount += myGrades[student].length;
+            // outside loop, loops over each student
+            for( var grade = 0; grade < myGrades[student].length; grade++){
+                // inner loop, loops over each grade
+                mySubtotal += myGrades[student][grade];
+            }
+            myTotal += mySubtotal;
+       }
+
+       alert("Your class grade average is:" + myTotal / myGradeCount);
+    </script>
+</body>
+</html>
