@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <label for="addTask">New task:</label><input id="addTask" type="text"><br>
+        <button onclick="addTask()" type="button">Add new task!</button><br>
+
+        <label for="deleteTask">Delete task by number:</label><input id="deleteTask" type="number"><br>
+        <button onclick="deleteTask()" type="button">Remove</button><br>
+    </form>
+    
+    <div id="task_list" class="task_list"></div>
+    
+    <script>
+        const taskList= [
+                    "You will soon achieve perfection... in your ability to make mistakes.",
+                    "Courage is not simply one of the virtues, but the form of every virtue at the testing point.",
+                    "Patience is your alley at the moment. Don’t worry!",
+                    "Tomorrow at breakfast, listen carefully: do not eat the fortune cookie.",
+                    "Don’t let friends impose on you, work calmly and silently.",
+                    "You will be hungry again in one hour.",
+                    "Be on the alert to recognize your prime at whatever time of your life it may occur.",
+                    "Nothing is impossible to a willing heart.",
+                    "Your road to glory will be rocky, but fulfilling.",
+                    "You will receive a fortune cookie."
+                ];
+        
+        function displayTasks(){
+          // Loop over all tasks, display in a list
+          let myList = document.getElementById("task_list");
+          myListHTML = "<ol>";
+          for(var taskNumber = 0; taskNumber < taskList.length; taskNumber++)
+          {
+                myListHTML += `<li> ${taskList[taskNumber]} </li>`;
+          }
+          myListHTML += "</ol>";
+          myList.innerHTML = myListHTML;
+        }
+        
+        function addTask(){
+            taskList.push(document.getElementById("addTask").value);
+            displayTasks();
+        }
+
+        function deleteTask(){
+            let tasknumber = Number(document.getElementById("deleteTask").value) - 1;
+            taskList.splice(tasknumber,1);
+            displayTasks();
+        }
+        
+        displayTasks();
+
+    </script>
+</body>
+</html>
