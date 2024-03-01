@@ -6,14 +6,13 @@
 </head>
 <body>
     
-    <form>
-        <label for="addTask">New task:</label><input id="addTask" type="text"><br>
-        <button onclick="addTask()" type="button">Add new task!</button><br>
 
-        <label for="deleteTask">Delete task by number:</label><input id="deleteTask" type="number"><br>
-        <button onclick="deleteTask()" type="button">Remove</button><br>
-    </form>
-    
+    <label for="addTask">New task:</label><input id="addTask" type="text"><br>
+    <button onclick="addTask()" type="button">Add new task!</button><br>
+
+    <label for="delTask">Remove Task Number:</label><input id="delTask" type="number"><br>
+    <button onclick="deleteTask()" type="button">Remove</button><br>
+
     <div id="task_list" class="task_list"></div>
     
     <script>
@@ -28,7 +27,7 @@
                     "Nothing is impossible to a willing heart.",
                     "Your road to glory will be rocky, but fulfilling.",
                     "You will receive a fortune cookie."
-                ];
+                ]
         
         function displayTasks(){
           // Loop over all tasks, display in a list
@@ -48,11 +47,15 @@
         }
 
         function deleteTask(){
-            let tasknumber = Number(document.getElementById("deleteTask").value) - 1;
-            taskList.splice(tasknumber,1);
+            let taskNumber = Number(document.getElementById("delTask").value) -1;
+            
+            //Error checking
+            if( taskNumber < 0 || taskNumber > taskList.length)
+                 return;
+            taskList.splice(taskNumber, 1);
             displayTasks();
         }
-        
+
         displayTasks();
 
     </script>
